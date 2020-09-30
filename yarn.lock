@@ -9516,16 +9516,6 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dom@^16.2.0:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react-dom/-/react-dom-16.13.1.tgz#c1bd37331a0486c078ee54c4740720993b2e0e7f"
-  integrity sha512-81PIMmVLnCNLO/fFOQxdQkvEq/+Hfpv24XNJfpyZhTRfO0QcmQIF/PgCa1zCOj2w1hrn12MFLyaJ/G0+Mxtfag==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
-    scheduler "^0.19.1"
-
 react-dropzone@5.1.1:
   version "5.1.1"
   resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-5.1.1.tgz#b05613ea22f1ab71aa1f7cf5367df7b19468a2f3"
@@ -9544,28 +9534,25 @@ react-fast-compare@^3.0.1, react-fast-compare@^3.2.0:
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
 
-react-file-icon@^0.2.0:
-  version "0.2.0"
-  resolved "https://registry.yarnpkg.com/react-file-icon/-/react-file-icon-0.2.0.tgz#93677943e8c91031a62ae9748c0fdbcb6cb4adc5"
-  integrity sha512-ochzrFgT23ULM2cht57LLQNgP0S4zHhJBZXgnPczCLkmdao9oL5IvRqUSwUMdNOiRmVaK6/ETkE/qhg5Ao7Ilw==
+react-file-icon@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/react-file-icon/-/react-file-icon-1.0.0.tgz#bf7154bf6dcf96072986c673069647d2a330ad6b"
+  integrity sha512-PNrk+iAC0g/RmYpfKfbwdtcnjylNmc/IwDUGEzIjjSiNo088km4Yh8cuEGHtgetduYo4gjc1i152iKWQJhYdbQ==
   dependencies:
     lodash.uniqueid "^4.0.1"
-    prop-types "^15.6.0"
-    react "^16.2.0"
-    react-dom "^16.2.0"
+    prop-types "^15.7.2"
     tinycolor2 "^1.4.1"
 
-react-file-utils@0.3.17:
-  version "0.3.17"
-  resolved "https://registry.yarnpkg.com/react-file-utils/-/react-file-utils-0.3.17.tgz#99e9a0583d7e0c362565068ffa09a7ea112754ba"
-  integrity sha512-8EFgRZJkIC8w48SLOtsJY3RHkUFtBebl9iyOM6B5qcz74cn7rvWxavXDUc22P7Ibs4xuNgYEfBt0OMdOLjKP7A==
+"react-file-utils@https://github.com/22media/react-file-utils.git#bugfix/react-file-icon":
+  version "0.3.16"
+  resolved "https://github.com/22media/react-file-utils.git#39c66632320e088b1f9c3d7758cdd8d9cc8112e3"
   dependencies:
     "@fortawesome/fontawesome-svg-core" "^1.2.13"
     "@fortawesome/free-regular-svg-icons" "^5.7.0"
     "@fortawesome/react-fontawesome" "^0.1.4"
     blueimp-load-image "^5.13.0"
     react-dropzone "5.1.1"
-    react-file-icon "^0.2.0"
+    react-file-icon "^1.0.0"
 
 react-focus-lock@^2.3.1:
   version "2.4.1"
@@ -9826,15 +9813,6 @@ react-virtuoso@0.20.0:
   dependencies:
     resize-observer-polyfill "^1.5.1"
     tslib "^1.11.1"
-
-react@^16.2.0:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/react/-/react-16.13.1.tgz#2e818822f1a9743122c063d6410d85c1e3afe48e"
-  integrity sha512-YMZQQq32xHLX0bz5Mnibv1/LHb3Sqzngu7xstSM+vrkE5Kzr9xE0yMByK5kMoTK30YVJE61WfbxIFFvfeDKT1w==
-  dependencies:
-    loose-envify "^1.1.0"
-    object-assign "^4.1.1"
-    prop-types "^15.6.2"
 
 read-pkg-up@^1.0.1:
   version "1.0.1"
