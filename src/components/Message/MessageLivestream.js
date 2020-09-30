@@ -177,20 +177,6 @@ const MessageLivestreamComponent = (props) => {
             ref={reactionSelectorRef}
           />
         )}
-        <MessageLivestreamActions
-          initialMessage={initialMessage}
-          message={message}
-          formatDate={formatDate}
-          onReactionListClick={onReactionListClick}
-          messageWrapperRef={messageWrapperRef}
-          getMessageActions={props.getMessageActions}
-          tDateTimeParser={propTDateTimeParser}
-          channelConfig={channelConfig}
-          threadList={props.threadList}
-          addNotification={props.addNotification}
-          handleOpenThread={propHandleOpenThread || handleOpenThread}
-          setEditingState={setEdit}
-        />
         <div className="str-chat__message-livestream-left">
           <Avatar
             image={message.user?.image}
@@ -286,6 +272,20 @@ const MessageLivestreamComponent = (props) => {
             )}
           </div>
         </div>
+        <MessageLivestreamActions
+          initialMessage={initialMessage}
+          message={message}
+          formatDate={formatDate}
+          onReactionListClick={onReactionListClick}
+          messageWrapperRef={messageWrapperRef}
+          getMessageActions={props.getMessageActions}
+          tDateTimeParser={propTDateTimeParser}
+          channelConfig={channelConfig}
+          threadList={props.threadList}
+          addNotification={props.addNotification}
+          handleOpenThread={propHandleOpenThread || handleOpenThread}
+          setEditingState={setEdit}
+        />
       </div>
     </React.Fragment>
   );
