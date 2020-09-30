@@ -82,6 +82,11 @@ const MessageActionsBox = ({
             </li>
           </button>
         )}
+        <button onClick={() => console.log('hello world')}>
+          <li className="str-chat__message-actions-list-item">
+            {t('Hello World')}
+          </li>
+        </button>
       </ul>
     </div>
   );
