@@ -207,6 +207,9 @@ export interface ChannelProps {
     channelId: string,
     updatedMessage: Client.Message,
   ): Promise<Client.UpdateMessageAPIResponse>;
+
+  /** Function to be called when a new local message is added to the channel state */
+  onLocalMessageAdded?(): void;
 }
 
 export type ArrayTwoOrMore<T> = {
