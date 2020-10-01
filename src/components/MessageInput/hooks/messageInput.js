@@ -2,11 +2,6 @@
 import { useReducer, useEffect, useContext, useRef, useCallback } from 'react';
 import Immutable from 'seamless-immutable';
 import { logChatPromiseExecution } from 'stream-chat';
-import {
-  dataTransferItemsHaveFiles,
-  dataTransferItemsToFiles,
-  // @ts-ignore
-} from 'react-file-utils';
 import { ChannelContext } from '../../../context/ChannelContext';
 import { generateRandomId } from '../../../utils';
 
@@ -629,9 +624,6 @@ export default function useMessageInputState(props) {
       (async (event) => {
         // TODO: Move this handler to package with ImageDropzone
         const { items } = event.clipboardData;
-        if (!dataTransferItemsHaveFiles(items)) {
-          return;
-        }
 
         event.preventDefault();
         // Get a promise for the plain text in case no files are
@@ -650,11 +642,6 @@ export default function useMessageInputState(props) {
           });
         }
 
-        const fileLikes = await dataTransferItemsToFiles(items);
-        if (fileLikes.length) {
-          uploadNewFiles(fileLikes);
-          return;
-        }
         // fallback to regular text paste
         if (plainTextPromise) {
           const s = await plainTextPromise;

@@ -2,7 +2,6 @@
 import React, { useEffect, useContext } from 'react';
 import PropTypes from 'prop-types';
 // @ts-ignore
-import { ImageDropzone, FileUploadButton } from 'react-file-utils';
 import { Tooltip } from '../Tooltip';
 
 import { ChannelContext, TranslationContext } from '../../context';
@@ -35,15 +34,6 @@ const EditMessageForm = (props) => {
 
   return (
     <div className="str-chat__edit-message-form">
-      <ImageDropzone
-        accept={channelContext.acceptedFiles}
-        multiple={channelContext.multipleUploads}
-        disabled={
-          channelContext.maxNumberOfFiles !== undefined &&
-          messageInput.numberOfUploads >= channelContext.maxNumberOfFiles
-        }
-        handleFiles={messageInput.uploadNewFiles}
-      >
         <form onSubmit={messageInput.handleSubmit}>
           <UploadsPreview {...messageInput} />
           <EmojiPicker {...messageInput} small />
@@ -80,16 +70,6 @@ const EditMessageForm = (props) => {
                 data-testid="fileinput"
               >
                 <Tooltip>{t('Attach files')}</Tooltip>
-                <FileUploadButton
-                  multiple={channelContext.multipleUploads}
-                  disabled={
-                    channelContext.maxNumberOfFiles !== undefined &&
-                    messageInput.numberOfUploads >=
-                      channelContext.maxNumberOfFiles
-                  }
-                  accepts={channelContext.acceptedFiles}
-                  handleFiles={messageInput.uploadNewFiles}
-                >
                   <span className="str-chat__input-fileupload">
                     <svg
                       width="14"
@@ -103,7 +83,6 @@ const EditMessageForm = (props) => {
                       />
                     </svg>
                   </span>
-                </FileUploadButton>
               </div>
             </div>
             <div>
@@ -112,7 +91,6 @@ const EditMessageForm = (props) => {
             </div>
           </div>
         </form>
-      </ImageDropzone>
     </div>
   );
 };

@@ -1053,32 +1053,6 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
-"@fortawesome/fontawesome-common-types@^0.2.31":
-  version "0.2.31"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-common-types/-/fontawesome-common-types-0.2.31.tgz#f15a39e5ab4e5dfda0717733bcacb9580e666ad9"
-  integrity sha512-xfnPyH6NN5r/h1/qDYoGB0BlHSID902UkQzxR8QsoKDh55KAPr8ruAoie12WQEEQT8lRE2wtV7LoUllJ1HqCag==
-
-"@fortawesome/fontawesome-svg-core@^1.2.13":
-  version "1.2.31"
-  resolved "https://registry.yarnpkg.com/@fortawesome/fontawesome-svg-core/-/fontawesome-svg-core-1.2.31.tgz#23fff9c521f1b57e79e4c2fd6cce8aa794e9d99e"
-  integrity sha512-lqUWRK+ylHQJG5Kiez4XrAZAfc7snxCc+X59quL3xPfMnxzfyf1lt+/hD7X1ZL4KlzAH2KFzMuEVrolo/rAkog==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.31"
-
-"@fortawesome/free-regular-svg-icons@^5.7.0":
-  version "5.15.0"
-  resolved "https://registry.yarnpkg.com/@fortawesome/free-regular-svg-icons/-/free-regular-svg-icons-5.15.0.tgz#6be839db8ee97facafd94fb8be180b2f28cf0d9f"
-  integrity sha512-kgdP2N5sFjzs5+XFZTsz8KNJjXm/851Gtjh8FcG+gpzN4weN/pd9S1jrf1e+2naWughHUzo7AKAzFB2CodpJ3g==
-  dependencies:
-    "@fortawesome/fontawesome-common-types" "^0.2.31"
-
-"@fortawesome/react-fontawesome@^0.1.4":
-  version "0.1.11"
-  resolved "https://registry.yarnpkg.com/@fortawesome/react-fontawesome/-/react-fontawesome-0.1.11.tgz#c1a95a2bdb6a18fa97b355a563832e248bf6ef4a"
-  integrity sha512-sClfojasRifQKI0OPqTy8Ln8iIhnxR/Pv/hukBhWnBz9kQRmqi6JSH3nghlhAY7SUeIIM7B5/D2G8WjX0iepVg==
-  dependencies:
-    prop-types "^15.7.2"
-
 "@istanbuljs/load-nyc-config@^1.0.0":
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/@istanbuljs/load-nyc-config/-/load-nyc-config-1.1.0.tgz#fd3db1d59ecf7cf121e80650bb86712f9b55eced"
@@ -2457,13 +2431,6 @@ atob@^2.1.2:
   resolved "https://registry.yarnpkg.com/atob/-/atob-2.1.2.tgz#6d9517eb9e030d2436666651e86bd9f6f13533c9"
   integrity sha512-Wm6ukoaOGJi/73p/cl2GvLjTI5JM1k/O14isD73YML8StrH/7/lRFgmg8nICZgD3bZZvjwCGxtMOD3wWNAu8cg==
 
-attr-accept@^1.1.3:
-  version "1.1.3"
-  resolved "https://registry.yarnpkg.com/attr-accept/-/attr-accept-1.1.3.tgz#48230c79f93790ef2775fcec4f0db0f5db41ca52"
-  integrity sha512-iT40nudw8zmCweivz6j58g+RT33I4KbaIvRUhjNmDwO2WmsQUxFEZZYZ5w3vXe5x5MX9D7mfvA/XaLOZYFR9EQ==
-  dependencies:
-    core-js "^2.5.0"
-
 autoprefixer@^9.8.6:
   version "9.8.6"
   resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-9.8.6.tgz#3b73594ca1bf9266320c5acf1588d74dea74210f"
@@ -2687,11 +2654,6 @@ bluebird@^3.5.5:
   version "3.7.2"
   resolved "https://registry.yarnpkg.com/bluebird/-/bluebird-3.7.2.tgz#9f229c15be272454ffa973ace0dbee79a1b0c36f"
   integrity sha512-XpNj6GDQzdfW+r2Wnn7xiSAd7TM3jzkxGXBGTtWKuSXv1xUV+azxAm8jdWZN06QTQk+2N2XB9jRDkvbmQmcRtg==
-
-blueimp-load-image@^5.13.0:
-  version "5.14.0"
-  resolved "https://registry.yarnpkg.com/blueimp-load-image/-/blueimp-load-image-5.14.0.tgz#e8086415e580df802c33ff0da6b37a8d20205cc6"
-  integrity sha512-g5l+4dCOESBG8HkPLdGnBx8dhEwpQHaOZ0en623sl54o3bGhGMLYGc54L5cWfGmPvfKUjbsY7LOAmcW/xlkBSA==
 
 bn.js@^4.0.0, bn.js@^4.1.0, bn.js@^4.4.0:
   version "4.11.9"
@@ -3586,11 +3548,6 @@ core-js@^1.0.0:
   version "1.2.7"
   resolved "https://registry.yarnpkg.com/core-js/-/core-js-1.2.7.tgz#652294c14651db28fa93bd2d5ff2983a4f08c636"
   integrity sha1-ZSKUwUZR2yj6k70tX/KYOk8IxjY=
-
-core-js@^2.5.0:
-  version "2.6.11"
-  resolved "https://registry.yarnpkg.com/core-js/-/core-js-2.6.11.tgz#38831469f9922bded8ee21c9dc46985e0399308c"
-  integrity sha512-5wjnpaT/3dV+XB4borEsnAYQchn00XSgTAWKDkEqv+K8KevjbzmofK6hfJ9TZIlpj2N0xQpazy7PiRQiWHqzWg==
 
 core-js@^3.2.1, core-js@^3.6.4:
   version "3.6.5"
@@ -7627,11 +7584,6 @@ lodash.uniqby@^4.7.0:
   resolved "https://registry.yarnpkg.com/lodash.uniqby/-/lodash.uniqby-4.7.0.tgz#d99c07a669e9e6d24e1362dfe266c67616af1302"
   integrity sha1-2ZwHpmnp5tJOE2Lf4mbGdhavEwI=
 
-lodash.uniqueid@^4.0.1:
-  version "4.0.1"
-  resolved "https://registry.yarnpkg.com/lodash.uniqueid/-/lodash.uniqueid-4.0.1.tgz#3268f26a7c88e4f4b1758d679271814e31fa5b26"
-  integrity sha1-MmjyanyI5PSxdY1nknGBTjH6WyY=
-
 lodash@^4.0.0, lodash@^4.14.0, lodash@^4.17.11, lodash@^4.17.12, lodash@^4.17.14, lodash@^4.17.15, lodash@^4.17.19, lodash@^4.17.20, lodash@~4.17.10:
   version "4.17.20"
   resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.20.tgz#b44a9b6297bcb698f1c51a3545a2b3b368d59c52"
@@ -9516,14 +9468,6 @@ react-docgen@^5.0.0:
     node-dir "^0.1.10"
     strip-indent "^3.0.0"
 
-react-dropzone@5.1.1:
-  version "5.1.1"
-  resolved "https://registry.yarnpkg.com/react-dropzone/-/react-dropzone-5.1.1.tgz#b05613ea22f1ab71aa1f7cf5367df7b19468a2f3"
-  integrity sha512-C9kXI3D95rVXbLLg9DvzCnmjplKwpfj/2F/MwvGVM05kDwWMzKVKZnmgZHZUebmiVj4mFOmBs2ObLiKvAxunGw==
-  dependencies:
-    attr-accept "^1.1.3"
-    prop-types "^15.6.2"
-
 react-error-overlay@^6.0.3:
   version "6.0.7"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.7.tgz#1dcfb459ab671d53f660a991513cb2f0a0553108"
@@ -9533,26 +9477,6 @@ react-fast-compare@^3.0.1, react-fast-compare@^3.2.0:
   version "3.2.0"
   resolved "https://registry.yarnpkg.com/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
-
-react-file-icon@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-file-icon/-/react-file-icon-1.0.0.tgz#bf7154bf6dcf96072986c673069647d2a330ad6b"
-  integrity sha512-PNrk+iAC0g/RmYpfKfbwdtcnjylNmc/IwDUGEzIjjSiNo088km4Yh8cuEGHtgetduYo4gjc1i152iKWQJhYdbQ==
-  dependencies:
-    lodash.uniqueid "^4.0.1"
-    prop-types "^15.7.2"
-    tinycolor2 "^1.4.1"
-
-"react-file-utils@https://github.com/22media/react-file-utils.git#bugfix/react-file-icon":
-  version "0.3.16"
-  resolved "https://github.com/22media/react-file-utils.git#39c66632320e088b1f9c3d7758cdd8d9cc8112e3"
-  dependencies:
-    "@fortawesome/fontawesome-svg-core" "^1.2.13"
-    "@fortawesome/free-regular-svg-icons" "^5.7.0"
-    "@fortawesome/react-fontawesome" "^0.1.4"
-    blueimp-load-image "^5.13.0"
-    react-dropzone "5.1.1"
-    react-file-icon "^1.0.0"
 
 react-focus-lock@^2.3.1:
   version "2.4.1"
@@ -11686,11 +11610,6 @@ tiny-warning@^1.0.2:
   version "1.0.3"
   resolved "https://registry.yarnpkg.com/tiny-warning/-/tiny-warning-1.0.3.tgz#94a30db453df4c643d0fd566060d60a875d84754"
   integrity sha512-lBN9zLN/oAf68o3zNXYrdCt1kP8WsiGW8Oo2ka41b2IM5JL/S1CTyX1rW0mb/zSuJun0ZUrDxx4sqvYS2FWzPA==
-
-tinycolor2@^1.4.1:
-  version "1.4.2"
-  resolved "https://registry.yarnpkg.com/tinycolor2/-/tinycolor2-1.4.2.tgz#3f6a4d1071ad07676d7fa472e1fac40a719d8803"
-  integrity sha512-vJhccZPs965sV/L2sU4oRQVAos0pQXwsvTLkWYdqJ+a8Q5kPFzJTuOFwy7UniPli44NKQGAglksjvOcpo95aZA==
 
 tippy.js@^6.2.0:
   version "6.2.6"

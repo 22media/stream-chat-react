@@ -65,7 +65,6 @@ const externalDependencies = [
   'pretty-bytes',
   'prop-types',
   'react-fast-compare',
-  /react-file-utils/,
   'react-images',
   'react-is',
   /react-markdown/,

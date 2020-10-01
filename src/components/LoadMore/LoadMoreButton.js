@@ -1,8 +1,6 @@
 // @ts-check
 import React from 'react';
 import PropTypes from 'prop-types';
-// @ts-ignore
-import { LoadingIndicator } from 'react-file-utils';
 
 /**
  * @type {React.FC<import('types').LoadMoreButtonProps>}
@@ -15,7 +13,7 @@ const LoadMoreButton = ({ onClick, refreshing, children = 'Load more' }) => (
       data-testid="load-more-button"
       disabled={refreshing}
     >
-      {refreshing ? <LoadingIndicator /> : children}
+      {refreshing ? <div /> : children}
     </button>
   </div>
 );

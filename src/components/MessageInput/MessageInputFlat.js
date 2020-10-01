@@ -1,9 +1,6 @@
 // @ts-check
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-// @ts-ignore
-import { ImageDropzone, FileUploadButton } from 'react-file-utils';
-
 import { TranslationContext, ChannelContext } from '../../context';
 import { ChatAutoComplete } from '../ChatAutoComplete';
 import { Tooltip } from '../Tooltip';
@@ -25,15 +22,6 @@ const MessageInputFlat = (props) => {
         SendButton ? 'str-chat__input-flat--send-button-active' : null
       }`}
     >
-      <ImageDropzone
-        accept={channelContext.acceptedFiles}
-        multiple={channelContext.multipleUploads}
-        disabled={
-          channelContext.maxNumberOfFiles !== undefined &&
-          messageInput.numberOfUploads >= channelContext.maxNumberOfFiles
-        }
-        handleFiles={messageInput.uploadNewFiles}
-      >
         <div className="str-chat__input-flat-wrapper">
           <EmojiPicker {...messageInput} />
 
@@ -76,16 +64,6 @@ const MessageInputFlat = (props) => {
               data-testid="fileinput"
             >
               <Tooltip>{t('Attach files')}</Tooltip>
-              <FileUploadButton
-                multiple={channelContext.multipleUploads}
-                disabled={
-                  channelContext.maxNumberOfFiles !== undefined &&
-                  messageInput.numberOfUploads >=
-                    channelContext.maxNumberOfFiles
-                }
-                accepts={channelContext.acceptedFiles}
-                handleFiles={messageInput.uploadNewFiles}
-              >
                 <span className="str-chat__input-flat-fileupload">
                   <svg
                     width="14"
@@ -99,12 +77,10 @@ const MessageInputFlat = (props) => {
                     />
                   </svg>
                 </span>
-              </FileUploadButton>
             </div>
           </div>
           {SendButton && <SendButton sendMessage={messageInput.handleSubmit} />}
         </div>
-      </ImageDropzone>
     </div>
   );
 };

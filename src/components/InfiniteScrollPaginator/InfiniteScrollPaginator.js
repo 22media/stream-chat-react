@@ -1,16 +1,12 @@
 // @ts-check
 import React from 'react';
 import PropTypes from 'prop-types';
-// @ts-ignore
-import { LoadingIndicator as DefaultLoadingIndicator } from 'react-file-utils';
-
 import InfiniteScroll from './InfiniteScroll';
 
 /**
  * @type { React.FC<import('types').InfiniteScrollPaginatorProps>}
  */
 const InfiniteScrollPaginator = ({
-  LoadingIndicator = DefaultLoadingIndicator,
   loadNextPage,
   hasNextPage,
   refreshing,
@@ -30,7 +26,6 @@ const InfiniteScrollPaginator = ({
         className="str-chat__infinite-scroll-paginator"
         key="loadingindicator"
       >
-        <LoadingIndicator />
       </div>
     }
   >

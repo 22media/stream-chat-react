@@ -1,12 +1,6 @@
 // @ts-check
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-// @ts-ignore
-import {
-  ImageDropzone,
-  FileUploadButton,
-  // @ts-ignore
-} from 'react-file-utils';
 
 import { TranslationContext, ChannelContext } from '../../context';
 import { ChatAutoComplete } from '../ChatAutoComplete';
@@ -53,15 +47,6 @@ const MessageInputLarge = (props) => {
   const { SendButton } = props;
   return (
     <div className="str-chat__input-large">
-      <ImageDropzone
-        accept={channelContext.acceptedFiles}
-        multiple={channelContext.multipleUploads}
-        disabled={
-          channelContext.maxNumberOfFiles !== undefined &&
-          messageInput.numberOfUploads >= channelContext.maxNumberOfFiles
-        }
-        handleFiles={messageInput.uploadNewFiles}
-      >
         <div className="str-chat__input">
           <EmojiPicker {...messageInput} />
           <div className="str-chat__input--textarea-wrapper">
@@ -103,16 +88,6 @@ const MessageInputLarge = (props) => {
               data-testid="fileinput"
             >
               <Tooltip>{t('Attach files')}</Tooltip>
-              <FileUploadButton
-                multiple={channelContext.multipleUploads}
-                disabled={
-                  channelContext.maxNumberOfFiles !== undefined &&
-                  messageInput.numberOfUploads >=
-                    channelContext.maxNumberOfFiles
-                }
-                accepts={channelContext.acceptedFiles}
-                handleFiles={messageInput.uploadNewFiles}
-              >
                 <span className="str-chat__input-fileupload">
                   <svg
                     width="14"
@@ -126,7 +101,6 @@ const MessageInputLarge = (props) => {
                     />
                   </svg>
                 </span>
-              </FileUploadButton>
             </div>
           </div>
           {SendButton && <SendButton sendMessage={messageInput.handleSubmit} />}
@@ -149,7 +123,6 @@ const MessageInputLarge = (props) => {
             </span>
           </div>
         </div>
-      </ImageDropzone>
     </div>
   );
 };
