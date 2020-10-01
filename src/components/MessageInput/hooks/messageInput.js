@@ -452,7 +452,7 @@ export default function useMessageInputState(props) {
       overrideSubmitHandler(
         {
           ...updatedMessage,
-          parent,
+          ...(parent ? {wp_parent: parent} : null),
         },
         channel.cid,
       );
@@ -460,7 +460,7 @@ export default function useMessageInputState(props) {
     } else if (sendMessage) {
       const sendMessagePromise = sendMessage({
         ...updatedMessage,
-        parent,
+        ...(parent ? {wp_parent: parent} : null),
       });
       logChatPromiseExecution(sendMessagePromise, 'send message');
       dispatch({ type: 'clear' });

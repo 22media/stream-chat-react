@@ -329,15 +329,13 @@ const ChannelInner = ({
   const { doSendMessageRequest } = props;
   const doSendMessage = useCallback(
     async (message) => {
-      const { text, attachments, id, parent_id, mentioned_users, show_in_channel, parent } = message;
+      const { text, attachments, id, mentioned_users, wp_parent } = message;
       const messageData = {
         text,
         attachments,
         mentioned_users,
         id,
-        parent_id,
-        show_in_channel,
-        parent,
+        wp_parent,
       };
       
       try {
@@ -370,7 +368,7 @@ const ChannelInner = ({
   );
 
   const createMessagePreview = useCallback(
-    (text, attachments, parent, mentioned_users) => {
+    (text, attachments, wp_parent, mentioned_users) => {
       // create a preview of the message
       const clientSideID = `${chatContext.client.userID}-${uuidv4()}`;
       return {
@@ -385,18 +383,14 @@ const ChannelInner = ({
         attachments,
         mentioned_users,
         reactions: [],
-        ...(parent?.id ? { 
-          parent_id: parent.id,
-          show_in_channel: true,
-          parent
-        } : null),
+        ...(wp_parent ? { wp_parent } : null),
       };
     },
     [chatContext.client.user, chatContext.client.userID],
   );
 
   const sendMessage = useCallback(
-    async ({ text, attachments = [], mentioned_users = [], parent }) => {
+    async ({ text, attachments = [], mentioned_users = [], wp_parent }) => {
       // remove error messages upon submit
       channel.state.filterErrorMessages();
 
@@ -404,12 +398,17 @@ const ChannelInner = ({
       const messagePreview = createMessagePreview(
         text,
         attachments,
-        parent,
+        wp_parent,
         mentioned_users,
       );
 
       // first we add the message to the UI
       updateMessage(messagePreview);
+      
+      // and notify the parent component that a new message has been added
+      if (props.onLocalMessageAdded) {
+        props.onLocalMessageAdded();
+      }
 
       await doSendMessage(messagePreview);
     },
