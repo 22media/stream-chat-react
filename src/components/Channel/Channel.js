@@ -329,7 +329,7 @@ const ChannelInner = ({
   const { doSendMessageRequest } = props;
   const doSendMessage = useCallback(
     async (message) => {
-      const { text, attachments, id, parent_id, mentioned_users, show_in_channel } = message;
+      const { text, attachments, id, parent_id, mentioned_users, show_in_channel, parent } = message;
       const messageData = {
         text,
         attachments,
@@ -337,6 +337,7 @@ const ChannelInner = ({
         id,
         parent_id,
         show_in_channel,
+        parent,
       };
       
       try {
@@ -384,7 +385,11 @@ const ChannelInner = ({
         attachments,
         mentioned_users,
         reactions: [],
-        ...(parent?.id ? { parent_id: parent.id, show_in_channel: true } : null),
+        ...(parent?.id ? { 
+          parent_id: parent.id,
+          show_in_channel: true,
+          parent
+        } : null),
       };
     },
     [chatContext.client.user, chatContext.client.userID],
