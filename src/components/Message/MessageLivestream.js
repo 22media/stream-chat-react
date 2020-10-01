@@ -264,12 +264,12 @@ const MessageLivestreamComponent = (props) => {
               handleReaction={propHandleReaction || handleReaction}
             />
 
-            {!initialMessage && (
+            {/* !initialMessage && (
               <MessageRepliesCountButton
                 onClick={propHandleOpenThread || handleOpenThread}
                 reply_count={message.reply_count}
               />
-            )}
+            ) */}
           </div>
         </div>
         <MessageLivestreamActions
