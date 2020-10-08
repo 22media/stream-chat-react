@@ -100,7 +100,7 @@
   }
   &:hover {
     .str-chat__message-livestream-actions {
-      display: flex;
+      display: none; /* startWatchParty: hide default hover actions */
     }
   }
 
