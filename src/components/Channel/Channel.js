@@ -351,6 +351,11 @@ const ChannelInner = ({
 
         // replace it after send is completed
         if (messageResponse && messageResponse.message) {
+          console.log("HELLO WORLDDD");
+          if (messageResponse.message.type === 'error' && messageResponse.message.text === 'Automod blocked your message') {
+            return;
+          }
+
           updateMessage({
             ...messageResponse.message,
             status: 'received',
