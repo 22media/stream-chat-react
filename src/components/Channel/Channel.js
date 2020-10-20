@@ -337,7 +337,7 @@ const ChannelInner = ({
         id,
         wp_parent,
       };
-
+      
       try {
         let messageResponse;
         if (doSendMessageRequest) {
@@ -351,24 +351,13 @@ const ChannelInner = ({
 
         // replace it after send is completed
         if (messageResponse && messageResponse.message) {
-          if (
-            messageResponse.message.type === 'error' &&
-            messageResponse.message.text === 'Automod blocked your message'
-          ) {
+          if (messageResponse.message.type === 'error' && messageResponse.message.text === 'Automod blocked your message') {
             return;
           }
 
-          const updatedMessage = {
+          updateMessage({
             ...messageResponse.message,
             status: 'received',
-          };
-
-          updateMessage(updatedMessage);
-
-          await channel.sendEvent({
-            // @ts-ignore
-            type: 'message.updated',
-            message: updatedMessage,
           });
         }
       } catch (e) {
@@ -419,7 +408,7 @@ const ChannelInner = ({
 
       // first we add the message to the UI
       updateMessage(messagePreview);
-
+      
       // and notify the parent component that a new message has been added
       if (props.onLocalMessageAdded) {
         props.onLocalMessageAdded();
